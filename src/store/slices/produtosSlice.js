@@ -13,8 +13,13 @@ export const produtosSlice = createSlice({
   initialState,
   reducers: {
     salvarProdutos: (state, action) => {
-      state.lista = action.payload;
-      state.listaNaoFiltrada = action.payload;
+
+      const produtos = action.payload;
+
+      state.lista = produtos;
+
+      // state.lista = action.payload;
+      // state.listaNaoFiltrada = action.payload;
     },
 
     filtrarProdutosPorCategoria: (state, action) => {
